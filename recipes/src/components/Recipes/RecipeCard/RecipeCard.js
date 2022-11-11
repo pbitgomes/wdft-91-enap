@@ -11,7 +11,7 @@ function RecipeCard({ recipe, deleteRecipe }) {
             </Card.Header>
             <Card.Body>
                 <Card.Img variant="top" src={recipe.image} />
-                <Card.Text>Calorias: {recipe.calories}</Card.Text>
+                <Card.Text>Porções: {recipe.servings}</Card.Text>
                 <Card.Text>Dificuldade: {recipe.level}</Card.Text>
                 <Button variant="danger" onClick={() => deleteRecipe(recipe.name)}>Excluir a refeição</Button>
             </Card.Body>

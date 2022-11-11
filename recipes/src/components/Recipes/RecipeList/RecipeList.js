@@ -2,11 +2,20 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import RecipeCard from '../RecipeCard/RecipeCard';
 import AddRecipe from '../AddRecipe/AddRecipe';
-import { Navigate } from "react-router-dom";
 import recipesData from '../../../recipes.json'
+// import { Navigate } from "react-router-dom";
 
 function RecipeList() {
     const [recipes, setRecipes] = useState(recipesData)
+    
+    // verificar se o usuário está logado
+    // const [isLogged, setIsLogged] = useState(true)
+
+    // if(!isLogged) {
+    //     // Navigate é usado quando vamos direcionar o usuário
+    //     // link é usado quando clicamos em um botão, em um link
+    //     return <Navigate to="/erro" />
+    // }
 
     const deleteRecipe = (recipeKey) => {
         const newRecipes = recipes.filter((recipe, index) => {
